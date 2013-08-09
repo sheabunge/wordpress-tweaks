@@ -12,3 +12,20 @@ Install this plugin through Git:
     git clone https://github.com/bungeshea/wordpress-tweaks.git
 
 Then, open up the plugin files and add, remove, or edit tweaks as you see fit.
+
+## Included Tweaks
+
+* Allow shortcodes to be used in text widgets
+* Cleanup extra information that WordPress puts in the page head
+* Provides a template tag to be used instead of `wp_head()` that fixes indentation, and removes unnecessary markup
+
+### Admin
+
+* Remove confusing sidebar widgets
+* Remove unnecessary dashboard widgets
+* Remove the WordPress logo and Yoast SEO menus from the admin bar
+* Set the login page to use the site's name and URL
+* Add a 'developed by' message in the admin footer
+* Remove admin menus for non-administrators
+* Hide the welcome panel
+* Remove Yoast SEO page insights feature and annoying SEO admin columns
