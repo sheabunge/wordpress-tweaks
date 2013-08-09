@@ -11,7 +11,7 @@ This plugin is meant for hacking! Dive into the code, and add or remove tweaks d
 Install this plugin through Git:
 
     cd wp-content/plugins
-    git clone https://github.com/bungeshea/wordpress-tweaks.git
+    git clone https://github.com/bungeshea/wordpress-tweaks.git tweaks
 
 Then, open up the plugin files and add, remove, or edit tweaks as you see fit.
 
