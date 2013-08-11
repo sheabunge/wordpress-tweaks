@@ -59,38 +59,3 @@ function tweaks_head_cleanup() {
 }
 
 add_action( 'init', 'tweaks_head_cleanup' );
-
-/**
- * Prints a nicely indented wp_head()
- * Must be used in your theme instead of the wp_head() function
- *
- * @return void
- */
-function clean_wp_head() {
-
-	/* Begin output buffering */
-	ob_start();
-
-	/* Run the wp_head action */
-	do_action( 'wp_head' );
-
-	/* Grab the output and flush the buffer */
-	$wp_head = ob_get_clean();
-
-	/* Remove all comments from head */
-#	$wp_head = preg_replace( '/<!--(.*)-->/', '', $wp_head );
-
-	/* Remove Yoast SEO junk */
-	$wp_head = preg_replace(
-		'/<!-- This site is optimized with the Yoast WordPress SEO plugin(.* )-->/',
-		'<!-- Search Engine Optimization -->', // replace this line with an empty string to remove it completely
-		$wp_head
-	);
-	$wp_head = str_replace( "\n<!-- / Yoast WordPress SEO plugin. -->", '', $wp_head );
-
-	/* Replace add indentation to newlines */
-	$wp_head = str_replace( "\n", "\n\t\t", $wp_head );
-
-	/* Output the result */
-	echo $wp_head;
-}
